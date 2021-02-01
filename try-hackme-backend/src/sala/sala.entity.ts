@@ -11,6 +11,10 @@ export class Sala {
   @Column()
   nombre: string;
 
+
+  @Column()
+  descripcion: string;
+
   @Column()
   dificultad: string;//enum
 
@@ -21,5 +25,5 @@ export class Sala {
   
   @ManyToMany(() => Categoria)
   @JoinTable()
-  categories: Categoria[];
+  categorias: Categoria[];
 }

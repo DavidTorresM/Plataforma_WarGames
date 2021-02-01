@@ -11,7 +11,6 @@ import {
     ApiOkResponse,
   } from '@nestjs/swagger';
 
-@ApiBearerAuth()
 @ApiTags('Categoria')
 @Controller('api/categoria')
 export class CategoriaController {

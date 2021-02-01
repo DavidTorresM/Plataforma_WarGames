@@ -6,10 +6,10 @@ export class Usuario {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({unique:true})
   email: string;
 
-  @Column()
+  @Column({unique:true})
   nick: string;
 
 }

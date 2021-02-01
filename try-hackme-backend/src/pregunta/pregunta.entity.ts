@@ -18,6 +18,13 @@ export class Pregunta {
 
 
   @Column()
+  respuestaHidden: string;
+
+
+  @Column()
+  hint: string;
+
+  @Column()
   idSala: number;
 
   @ManyToOne(()=>Sala,sala => sala.id)

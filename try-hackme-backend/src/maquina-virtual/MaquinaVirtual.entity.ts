@@ -7,11 +7,10 @@ export class MaquinaVirtual {
   id: number;
 
   @Column()
-  firstName: string;
+  ip: string;
 
   @Column()
-  lastName: string;
+  url: string;
 
-  @Column({ default: true })
-  isActive: boolean;
+
 }

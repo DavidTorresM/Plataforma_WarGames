@@ -6,12 +6,13 @@ import { CategoriaDTO } from '../interface/categoria.interface';
 
 @Injectable()
 export class CategoriaService {
-    async delete(id: number): Promise< Categoria > {
-        return (await this.repositorioCategoria.delete({id})).raw;
-    }
     constructor(
         @InjectRepository(Categoria) private repositorioCategoria: Repository< Categoria >,
     ){}
+    
+    async delete(id: number): Promise< Categoria > {
+        return (await this.repositorioCategoria.delete({id})).raw;
+    }
 
     async obtenerCategorias(): Promise < Categoria[] >{
         return await this.repositorioCategoria.find();
